@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+    <div id="vue-app">
+        <h1>Events</h1>
+        <p>my age is {{ age }}</p>
+        <button v-on:click.once ="add(1)">add </button>
+        <button v-on:click="subt(1)">subtract</button>
+        <button v-on:dblclick="add(10)">add 10</button>
+        <button v-on:click="subt(10)">subtract 10</button>
+
+        <div id="box" v-on:mousemove="axis">
+            {{ x }}, {{ y }}
+        </div>
+
+        <input type="text" v-model="name" />
+        <p>{{ name }}</p>
+        <input type="text" v-model="age" />
+    </div>
+    <script src="App.js"></script>
+</body>
+</html>
